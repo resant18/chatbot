@@ -5,9 +5,9 @@
 
 // module.exports = function(controller) {
 
-//     controller.hears('sample','message,direct_message', async(bot, message) => {
-//         await bot.reply(message, 'I heard a sample message.');
-//     });
+    // controller.hears('sample','message,direct_message', async(bot, message) => {
+    //     await bot.reply(message, 'I heard a sample message.');
+    // });
 
 //     controller.on('message,direct_message', async(bot, message) => {
 //         await bot.reply(message, `Hear my echo: ${ message.text }`);
@@ -31,6 +31,71 @@ module.exports = function(controller) {
            { key: "name" }
         );
     })
+
+    // function typeReply() {
+    //     return (bot.reply(message, {
+    //       text: "What do you want to know about me?",
+    //       quick_replies: [
+    //         {
+    //           title: "Basics",
+    //           payload: "this is basics content",
+    //         },
+    //         {
+    //           title: "Work",
+    //           payload: "this is work content",
+    //         },
+    //       ],
+    //     }));
+    // }
+
+    controller.hears(
+        ["Hi", "hola"],
+        "message,direct_message",
+        async (bot, message) => {
+            // await bot.reply(message, "I heard a sample message.");
+            
+            bot.reply(message, { type: "typing" });
+
+            const p1 = await new Promise((resolve) => {
+                return setTimeout(async () => {
+                    // will have to reset context because turn has now ended.
+                    await bot.changeContext(message.reference);
+                    return resolve(bot.reply(message, "Hello, I'm a digital Avatar."));
+                }, 1000);
+            });
+            const p2 = await new Promise(async (resolve) => {
+                await bot.reply(message, { type: "typing" });
+
+                await setTimeout(() => {
+                    bot.reply(message, {
+                        text: "What do you want to know about me?",
+                        quick_replies: [
+                            {
+                                title: "Basics",
+                                payload: "Basics"
+                            },
+                            {
+                                title: "Work",
+                                payload: "Work"
+                            },
+                        ]
+                    });
+                }, 1000);
+            });
+        }
+    );
+
+    controller.hears(["work", "basics"], "message,direct_message", async (bot, message) => {
+        bot.reply(message, { type: "typing" });
+
+        const p1 = await new Promise((resolve) => {
+          return setTimeout(async () => {
+            // will have to reset context because turn has now ended.
+            await bot.changeContext(message.reference);
+            return resolve(bot.reply(message, "Awesome!"));
+          }, 1000);
+        });
+    });
 
 
 
