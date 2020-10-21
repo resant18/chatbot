@@ -1,0 +1,110 @@
+{
+  "basics": {
+    "name": "Carl Godlewski",
+    "label": "Software Engineer",
+    "picture": "",
+    "email": "asumosa1993@gmail.com",
+    "phone": "(628) 207-9377",
+    "website": "http://alfredosumosa.com",
+    "summary": "Reach out to me at 1-347-224-9626 to learn more about me",
+    "location": {
+      "address": "98-05 63rd Road Apt. 4L",
+      "postalCode": "11374",
+      "city": "New York City",
+      "countryCode": "US",
+      "region": "New York"
+    },
+    "profiles": [
+      {
+        "network": "LinkedIn",
+        "username": "carlgodlewski",
+        "url": "https://www.linkedin.com/in/carlgodlewski"
+      },
+      {
+        "network": "GitHub",
+        "username": "CGodl",
+        "url": "https://github.com/cgodl"
+      },
+      {
+        "network": "AngelList",
+        "username": "carl-godlewski",
+        "url": "https://angel.co/u/carl-godlewski"
+      }
+    ]
+  },
+  "work": [
+    {
+      "company": "National Futures Association",
+      "position": "Compliance Examiner​",
+      "website": "None",
+      "startDate": "2015-02",
+      "endDate": "2019-12",
+      "summary": "Description...",
+      "highlights": [
+        "Led interviews of firm key senior personnel to understand firm’s compliance structure",
+        "Completed seven large-scale investigations of member firms within prescribed deadlines",
+        "Sought and identified gaps in compliance of member firm documentation",
+        "Managed multiple new hires in investigations and conducted second-level review of others work"
+      ]
+    },
+    {
+      "company": "Bangkok Bank",
+      "position": "Compliance Assistant​",
+      "website": "None",
+      "startDate": "2014-03",
+      "endDate": "2015-02",
+      "summary": "Description...",
+      "highlights": [
+        "Standardized and maintained client data with corrections on over 2,000 data points in Excel software covering name, address, and banking information",
+        "Conducted first-level investigation on an average of twenty high-risk clients on a monthly basis"
+      ]
+    }
+  ],
+  
+  "education": [
+    {
+      "institution": "Baruch College",
+      "area": "Finance",
+      "studyType": "Bachelor of Science",
+      "startDate": "2009-09",
+      "endDate": "2013-04",
+      "courses": [
+        "Business Statistics I",
+        "Econometrics",
+        "Object Oriented Programming I",
+        "Social Statistics"
+      ]
+    }
+  ],
+  "skills": [
+    {
+      "name": "JavaScript",
+      "level": "Advanced",
+      "keywords": ["DOM", "JS", "Javascript", "ECMAScript"]
+    },
+    {
+      "name": "Ruby",
+      "level": "Advanced",
+      "keywords": ["Ruby", "OOP", "Object Oriented Programming"]
+    },
+    {
+      "name": "Node.js",
+      "level": "Advanced",
+      "keywords": ["Node", "nodejs", "Javascript", "server"]
+    }
+  ],
+  "languages": [
+    {
+      "language": "Polish",
+      "fluency": "Proficient"
+    },
+    {
+      "language": "English",
+      "fluency": "Native Speaker"
+    },
+    {
+      "language": "Russian",
+      "fluency": "Some Understanding"
+    }
+  ]
+}
