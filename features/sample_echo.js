@@ -3,18 +3,6 @@
  * Licensed under the MIT License.
  */
 
-// module.exports = function(controller) {
-
-    // controller.hears('sample','message,direct_message', async(bot, message) => {
-    //     await bot.reply(message, 'I heard a sample message.');
-    // });
-
-//     controller.on('message,direct_message', async(bot, message) => {
-//         await bot.reply(message, `Hear my echo: ${ message.text }`);
-//     });
-
-// }
-
 module.exports = function(controller) {
 
     const { BotkitConversation } = require("botkit");
@@ -32,27 +20,10 @@ module.exports = function(controller) {
         );
     })
 
-    // function typeReply() {
-    //     return (bot.reply(message, {
-    //       text: "What do you want to know about me?",
-    //       quick_replies: [
-    //         {
-    //           title: "Basics",
-    //           payload: "this is basics content",
-    //         },
-    //         {
-    //           title: "Work",
-    //           payload: "this is work content",
-    //         },
-    //       ],
-    //     }));
-    // }
-
     controller.hears(
         ["Hi", "hola"],
         "message,direct_message",
         async (bot, message) => {
-            // await bot.reply(message, "I heard a sample message.");
             
             bot.reply(message, { type: "typing" });
 
@@ -63,6 +34,8 @@ module.exports = function(controller) {
                     return resolve(bot.reply(message, "Hello, I'm a digital Avatar."));
                 }, 1000);
             });
+
+            
             const p2 = await new Promise(async (resolve) => {
                 await bot.reply(message, { type: "typing" });
 
@@ -99,41 +72,7 @@ module.exports = function(controller) {
 
 
 
-    // collect a value with no conditions
-    // onboarding.ask("What is your name?", [], "name");
-    // onboarding.say(
-    //    "What is your name?",
-    //    async (response, onboarding, bot, full_message) => {
-    //       await bot.say("Oh your name is " + response);
-    //    },
-    //    { key: "name" }
-    // );
-
-//     // collect a value with conditional actions
-//     // onboarding.ask(
-//     //     "Do you like tacos?",
-//     //     [
-//     //         {
-//     //             pattern: "yes",
-//     //             handler: async function (answer, convo, bot) {
-//     //                 await convo.gotoThread("likes_tacos");
-//     //             },
-//     //         },
-//     //         {
-//     //             pattern: "no",
-//     //             handler: async function (answer, convo, bot) {
-//     //                 await convo.gotoThread("hates_life");
-//     //             },
-//     //         },
-//     //     ],
-//     //     { key: "tacos" }
-//     // );
-
-//     // // define a 'likes_tacos' thread
-//     // onboarding.addMessage("HOORAY TACOS", "likes_tacos");
-
-//     // // define a 'hates_life' thread
-//     // onboarding.addMessage("TOO BAD!", "hates_life");
+    
 
     // handle the end of the conversation
     onboarding.after(async (results, bot) => {
