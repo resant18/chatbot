@@ -1,0 +1,36 @@
+.splash-footer {
+  width: 100%;
+  position: fixed;
+  border-top: 1px solid gray;
+  font-family: 'Shrikhand', cursive;
+  color: white;
+
+  z-index: 10;
+  background-color: black;
+  bottom: 0;
+  padding-bottom: 20px;
+}
+
+.footer-main-title {
+  margin-bottom: 0px;
+}
+
+
+.footer-profiles {
+  margin-top: 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+
+
+}
+
+.footer-links p {
+  font: 30px;
+  margin-bottom: 1px;
+}
+
+.footer-links a {
+  text-decoration: none;
+  margin-right: 7px;
+}
