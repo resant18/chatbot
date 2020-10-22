@@ -170,7 +170,18 @@ module.exports = function(controller) {
               let shortSummary = human.basics.summary;
               await bot.changeContext(message.reference);
               return resolve(
-                bot.reply(message, `I'm glad you asked!\n\n${shortSummary}`)
+                bot.reply(message, `I'm glad you asked!`)
+              );
+            }, 1000);
+          });
+
+          const p00 = await new Promise(async (resolve) => {
+            await bot.reply(message, { type: "typing" });
+            return setTimeout(async () => {
+              let shortSummary = human.basics.summary;
+              await bot.changeContext(message.reference);
+              return resolve(
+                bot.reply(message, `${shortSummary}`)
               );
             }, 1000);
           });
