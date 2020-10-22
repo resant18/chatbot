@@ -8,22 +8,46 @@ const resume = require("../resume.json");
 module.exports = function(controller) {
     // Greet the user every time!!!!
     controller.on("welcome_back", async (bot, message) => {
-            await bot.reply(message, {
-                text: "Who do you want to know?",
-                quick_replies: [
-                    {
+            const w0 = await new Promise(async (resolve) => {
+              await bot.reply(message, { type: "typing" });
+              return setTimeout(async () => {
+                await bot.changeContext(message.reference);
+                return resolve(bot.reply(message, `Hello, welcome to the chatbot interview world`));
+              }, 1000);
+            });
+      
+            const w1 = await new Promise(async (resolve) => {
+              await bot.reply(message, { type: "typing" });
+              return setTimeout(async () => {
+                await bot.changeContext(message.reference);
+                return resolve(bot.reply(message, `This chatbot allows you the chance to interview either Alfredo, Carl, or Renata`));
+              }, 1000);
+            });
+      
+            const w2 = await new Promise(async (resolve) => {
+              await bot.reply(message, { type: "typing" });
+              return setTimeout(async () => {
+                await bot.changeContext(message.reference);
+                return resolve(
+                  await bot.reply(message, {
+                    text: "Who would you like to interview?",
+                    quick_replies: [
+                      {
                         title: "Alfredo",
                         payload: "alfredo",
-                    },
-                    {
+                      },
+                      {
                         title: "Carl",
                         payload: "Carl",
-                    },
-                    {
+                      },
+                      {
                         title: "Renata",
                         payload: "Renata",
-                    }
-                ],
+                      },
+                    ],
+                  })
+                );
+              }, 1000);
             });
     });
 
