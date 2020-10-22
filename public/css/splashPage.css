@@ -1,0 +1,18 @@
+.enter-button {
+  position: absolute;
+  display: block;
+  color: red;
+  z-index: 10;
+
+}
+
+
+.splash-background {
+  background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  
+}

@@ -1,3 +1,7 @@
+@import url('./footer.css');
+@import url('./splashPage.css');
+
+
 /* shared botkit ui styles */
 * {
   box-sizing: border-box;
