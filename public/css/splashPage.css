@@ -34,6 +34,12 @@
   display: block; */
   height: 60px;
   width: 200px;
+  background-color: #6f37b3;
+  border: 1px solid black;
+  font-family: 'Orbitron', sans-serif;
+  color: black;
+  border-radius: 5px;
+  margin-left: 31%;
 
 
 
