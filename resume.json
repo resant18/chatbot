@@ -207,12 +207,13 @@
     "basics": {
       "name": "Carl",
       "label": "Software Engineer",
-      "status": "looking for work",
+      "status": "open to work",
       "picture": "",
       "email": "carl@gmail.com",
       "phone": "(628) 207-9377",
       "website": "http://carl.com",
-      "summary": "A summary of John Doe...",
+      "summary": "A summary of Carl...",
+      "pitch": "Carl's pitch goes here",
       "location": {
         "address": "825 Battery St.",
         "postalCode": "94111",
@@ -245,8 +246,8 @@
     },
     "work": [
       {
-        "company": "Fundacion Simon Santander S.A.S.",
-        "position": "Electronics Engineer",
+        "company": "Company 1",
+        "position": "Position 1",
         "website": "",
         "startDate": "2018-01-01",
         "endDate": "2019-01-01",
@@ -254,9 +255,9 @@
         "highlights": ["Produced Power Analysis Specifications"]
       },
       {
-        "company": "Sky Work S.A.S.",
-        "position": "Lead Developer",
-        "website": "http://skyworksas.co",
+        "company": "Company 2",
+        "position": "Position 2",
+        "website": "http://example.com",
         "startDate": "2019-02-21",
         "endDate": "2020-02-21",
         "summary": "Description...",
@@ -265,24 +266,11 @@
           "Mantained website and online services running smoothly",
           "Helped with the growth of the company online presence"
         ]
-      },
-      {
-        "company": "Microsoft ( via Aerotek Inc. )",
-        "position": "Software Design Engineer",
-        "website": "http://microsoftc.com",
-        "startDate": "2020-05-04",
-        "endDate": "2020-08-21",
-        "summary": "Description...",
-        "highlights": [
-          "Microsoft LEAP Apprentice",
-          "Improved Azure Portal Scaling Experience",
-          "Implement front end logic to handle visibility of possible errors"
-        ]
       }
     ],
     "volunteer": [
       {
-        "organization": "Colegio La Nueva Esperanza's 2010 Mathematics Olympics",
+        "organization": "Organization 1",
         "position": "Volunteer",
         "website": "http://organization.com/",
         "startDate": "2010-05-01",
@@ -296,19 +284,13 @@
     ],
     "education": [
       {
-        "institution": "Universidad del Norte - Colombia",
-        "area": "Electronics Engineering",
+        "institution": "Institution 1",
+        "area": "Area 1",
         "studyType": "Bachelor of Science",
         "startDate": "2011-01-23",
         "endDate": "2017-09-01",
         "gpa": "3.5",
-        "courses": [
-          "IEN8430 - Telematics",
-          "IEN8512 - CCNA 1",
-          "IEL4045 - Automatic Controls",
-          "IST2088 - Algorithms and Programming 1",
-          "IEN8485 - Industrial Automation"
-        ]
+        "courses": ["Course 1", "Course 2", "Course 3", "Course 4"]
       }
     ],
     "awards": [
@@ -321,11 +303,11 @@
     ],
     "publications": [
       {
-        "name": "Design and Implementation of an Electronic Board for Actuators and Sensors' Control in a Modular Way.",
-        "publisher": "Universidad del Norte",
+        "name": "Publication 1",
+        "publisher": "Publisher 1",
         "releaseDate": "2017-05-25",
-        "website": "http://hdl.handle.net/10584/7313",
-        "summary": "Design and Implementation of an Electronic Board for Actuators and Sensors' Control in a Modular Way."
+        "website": "http://example.com",
+        "summary": "Summary 1"
       }
     ],
     "skills": [
@@ -377,26 +359,26 @@
     ],
     "languages": [
       {
-        "language": "Spanish",
+        "language": "Language 1",
         "fluency": "Native speaker"
       },
       {
-        "language": "English",
-        "fluency": "Full Proffesional Proficiency"
+        "language": "Language 2",
+        "fluency": "Native speaker"
       }
     ],
     "interests": [
       {
-        "name": "Lifelong Learning",
-        "keywords": ["Life", "Lessons"]
+        "name": "Interest 1",
+        "keywords": ["Key1", "Key2"]
       },
       {
-        "name": "Food",
-        "keywords": ["Authentic", "Burgers"]
+        "name": "Interest 2",
+        "keywords": ["Key1", "Key2"]
       },
       {
-        "name": "Traveling",
-        "keywords": ["learning", "explore"]
+        "name": "Interest 3",
+        "keywords": ["Key1", "Key2"]
       }
     ],
     "references": [
@@ -410,12 +392,13 @@
     "basics": {
       "name": "Renata Santoso",
       "label": "Software Engineer",
-      "status": "looking for work",
+      "status": "open to work",
       "picture": "",
       "email": "renata@gmail.com",
       "phone": "(628) 207-9377",
       "website": "http://renata.com",
-      "summary": "A summary of John Doe...",
+      "summary": "A summary of Renata...",
+      "pitch": "Renata summary goes here",
       "location": {
         "address": "825 Battery St.",
         "postalCode": "94111",
@@ -448,8 +431,8 @@
     },
     "work": [
       {
-        "company": "Fundacion Simon Santander S.A.S.",
-        "position": "Electronics Engineer",
+        "company": "Company 1",
+        "position": "Position 1",
         "website": "",
         "startDate": "2018-01-01",
         "endDate": "2019-01-01",
@@ -457,9 +440,9 @@
         "highlights": ["Produced Power Analysis Specifications"]
       },
       {
-        "company": "Sky Work S.A.S.",
-        "position": "Lead Developer",
-        "website": "http://skyworksas.co",
+        "company": "Company 2",
+        "position": "Position 2",
+        "website": "http://example.com",
         "startDate": "2019-02-21",
         "endDate": "2020-02-21",
         "summary": "Description...",
@@ -468,24 +451,11 @@
           "Mantained website and online services running smoothly",
           "Helped with the growth of the company online presence"
         ]
-      },
-      {
-        "company": "Microsoft ( via Aerotek Inc. )",
-        "position": "Software Design Engineer",
-        "website": "http://microsoftc.com",
-        "startDate": "2020-05-04",
-        "endDate": "2020-08-21",
-        "summary": "Description...",
-        "highlights": [
-          "Microsoft LEAP Apprentice",
-          "Improved Azure Portal Scaling Experience",
-          "Implement front end logic to handle visibility of possible errors"
-        ]
       }
     ],
     "volunteer": [
       {
-        "organization": "Colegio La Nueva Esperanza's 2010 Mathematics Olympics",
+        "organization": "Organization 1",
         "position": "Volunteer",
         "website": "http://organization.com/",
         "startDate": "2010-05-01",
@@ -499,19 +469,13 @@
     ],
     "education": [
       {
-        "institution": "Universidad del Norte - Colombia",
-        "area": "Electronics Engineering",
+        "institution": "Institution 1",
+        "area": "Area 1",
         "studyType": "Bachelor of Science",
         "startDate": "2011-01-23",
         "endDate": "2017-09-01",
         "gpa": "3.5",
-        "courses": [
-          "IEN8430 - Telematics",
-          "IEN8512 - CCNA 1",
-          "IEL4045 - Automatic Controls",
-          "IST2088 - Algorithms and Programming 1",
-          "IEN8485 - Industrial Automation"
-        ]
+        "courses": ["Course 1", "Course 2", "Course 3", "Course 4"]
       }
     ],
     "awards": [
@@ -524,11 +488,11 @@
     ],
     "publications": [
       {
-        "name": "Design and Implementation of an Electronic Board for Actuators and Sensors' Control in a Modular Way.",
-        "publisher": "Universidad del Norte",
+        "name": "Publication 1",
+        "publisher": "Publisher 1",
         "releaseDate": "2017-05-25",
-        "website": "http://hdl.handle.net/10584/7313",
-        "summary": "Design and Implementation of an Electronic Board for Actuators and Sensors' Control in a Modular Way."
+        "website": "http://example.com",
+        "summary": "Summary 1"
       }
     ],
     "skills": [
@@ -580,26 +544,26 @@
     ],
     "languages": [
       {
-        "language": "Spanish",
+        "language": "Language 1",
         "fluency": "Native speaker"
       },
       {
-        "language": "English",
-        "fluency": "Full Proffesional Proficiency"
+        "language": "Language 2",
+        "fluency": "Native speaker"
       }
     ],
     "interests": [
       {
-        "name": "Lifelong Learning",
-        "keywords": ["Life", "Lessons"]
+        "name": "Interest 1",
+        "keywords": ["Key1", "Key2"]
       },
       {
-        "name": "Food",
-        "keywords": ["Authentic", "Burgers"]
+        "name": "Interest 2",
+        "keywords": ["Key1", "Key2"]
       },
       {
-        "name": "Traveling",
-        "keywords": ["learning", "explore"]
+        "name": "Interest 3",
+        "keywords": ["Key1", "Key2"]
       }
     ],
     "references": [
