@@ -183,6 +183,62 @@ module.exports = function(controller) {
     }
   );
 
+      // option multiple-choice basics
+  const typingPromise2 = (bot, message) => {
+    return new Promise(async (resolve) => {
+      await bot.reply(message, { type: "typing" });
+
+      await setTimeout(() => {
+        bot.reply(message, {
+          text: "Here are more facts you can ask me about:",
+          quick_replies: [
+            {
+              title: "Basics",
+              payload: "Basics",
+            },
+            {
+              title: "Work",
+              payload: "Work",
+            },
+            {
+              title: "Volunteer",
+              payload: "Volunteer",
+            },
+            {
+              title: "Education",
+              payload: "Education",
+            },
+            {
+              title: "Awards",
+              payload: "Awards",
+            },
+            {
+              title: "Publications",
+              payload: "Publications",
+            },
+            {
+              title: "Skills",
+              payload: "Skills",
+            },
+            {
+              title: "Languages",
+              payload: "Languages",
+            },
+            {
+              title: "Interests",
+              payload: "Interests",
+            },
+            {
+              title: "References",
+              payload: "References",
+            },
+          ],
+        });
+      }, 1000);
+      resolve("done");
+    });
+  }
+
   // Bot hears basics.
   controller.hears(
     [
@@ -391,7 +447,7 @@ module.exports = function(controller) {
       }
 
       // option multiple-choice basics
-      const pMore = await new Promise(async (resolve) => {
+      const typingPromise1 = await new Promise(async (resolve) => {
         await bot.reply(message, { type: "typing" });
 
         await setTimeout(() => {
@@ -481,59 +537,7 @@ module.exports = function(controller) {
         }, 1000);
       });
 
-      // option multiple-choice basics
-      const pMore = await new Promise(async (resolve) => {
-        await bot.reply(message, { type: "typing" });
-
-        await setTimeout(() => {
-          bot.reply(message, {
-            text: "Here are more facts you can ask me about:",
-            quick_replies: [
-              {
-                title: "Basics",
-                payload: "Basics",
-              },
-              {
-                title: "Work",
-                payload: "Work",
-              },
-              {
-                title: "Volunteer",
-                payload: "Volunteer",
-              },
-              {
-                title: "Education",
-                payload: "Education",
-              },
-              {
-                title: "Awards",
-                payload: "Awards",
-              },
-              {
-                title: "Publications",
-                payload: "Publications",
-              },
-              {
-                title: "Skills",
-                payload: "Skills",
-              },
-              {
-                title: "Languages",
-                payload: "Languages",
-              },
-              {
-                title: "Interests",
-                payload: "Interests",
-              },
-              {
-                title: "References",
-                payload: "References",
-              },
-            ],
-          });
-        }, 1000);
-        resolve("done");
-      });
+      await typingPromise2(bot, message);
     }
   );
 
@@ -570,59 +574,7 @@ module.exports = function(controller) {
         }, 1000);
       });
 
-      // option multiple-choice basics
-      const pMore = await new Promise(async (resolve) => {
-        await bot.reply(message, { type: "typing" });
-
-        await setTimeout(() => {
-          bot.reply(message, {
-            text: "Here are more facts you can ask me about:",
-            quick_replies: [
-              {
-                title: "Basics",
-                payload: "Basics",
-              },
-              {
-                title: "Work",
-                payload: "Work",
-              },
-              {
-                title: "Volunteer",
-                payload: "Volunteer",
-              },
-              {
-                title: "Education",
-                payload: "Education",
-              },
-              {
-                title: "Awards",
-                payload: "Awards",
-              },
-              {
-                title: "Publications",
-                payload: "Publications",
-              },
-              {
-                title: "Skills",
-                payload: "Skills",
-              },
-              {
-                title: "Languages",
-                payload: "Languages",
-              },
-              {
-                title: "Interests",
-                payload: "Interests",
-              },
-              {
-                title: "References",
-                payload: "References",
-              },
-            ],
-          });
-        }, 1000);
-        resolve("done");
-      });
+      await typingPromise2(bot, message);
     }
   );
 
@@ -666,59 +618,7 @@ module.exports = function(controller) {
         }, 1000);
       });
 
-      // option multiple-choice basics
-      const pMore = await new Promise(async (resolve) => {
-        await bot.reply(message, { type: "typing" });
-
-        await setTimeout(() => {
-          bot.reply(message, {
-            text: "Here are more facts you can ask me about:",
-            quick_replies: [
-              {
-                title: "Basics",
-                payload: "Basics",
-              },
-              {
-                title: "Work",
-                payload: "Work",
-              },
-              {
-                title: "Volunteer",
-                payload: "Volunteer",
-              },
-              {
-                title: "Education",
-                payload: "Education",
-              },
-              {
-                title: "Awards",
-                payload: "Awards",
-              },
-              {
-                title: "Publications",
-                payload: "Publications",
-              },
-              {
-                title: "Skills",
-                payload: "Skills",
-              },
-              {
-                title: "Languages",
-                payload: "Languages",
-              },
-              {
-                title: "Interests",
-                payload: "Interests",
-              },
-              {
-                title: "References",
-                payload: "References",
-              },
-            ],
-          });
-        }, 1000);
-        resolve("done");
-      });
+      await typingPromise2(bot, message);
     }
   );
 
@@ -752,59 +652,7 @@ module.exports = function(controller) {
         }, 1000);
       });
 
-      // option multiple-choice basics
-      const pMore = await new Promise(async (resolve) => {
-        await bot.reply(message, { type: "typing" });
-
-        await setTimeout(() => {
-          bot.reply(message, {
-            text: "Here are more facts you can ask me about:",
-            quick_replies: [
-              {
-                title: "Basics",
-                payload: "Basics",
-              },
-              {
-                title: "Work",
-                payload: "Work",
-              },
-              {
-                title: "Volunteer",
-                payload: "Volunteer",
-              },
-              {
-                title: "Education",
-                payload: "Education",
-              },
-              {
-                title: "Awards",
-                payload: "Awards",
-              },
-              {
-                title: "Publications",
-                payload: "Publications",
-              },
-              {
-                title: "Skills",
-                payload: "Skills",
-              },
-              {
-                title: "Languages",
-                payload: "Languages",
-              },
-              {
-                title: "Interests",
-                payload: "Interests",
-              },
-              {
-                title: "References",
-                payload: "References",
-              },
-            ],
-          });
-        }, 1000);
-        resolve("done");
-      });
+      await typingPromise2(bot, message);
     }
   );
 
@@ -838,59 +686,7 @@ module.exports = function(controller) {
         }, 1000);
       });
 
-      // option multiple-choice basics
-      const pMore = await new Promise(async (resolve) => {
-        await bot.reply(message, { type: "typing" });
-
-        await setTimeout(() => {
-          bot.reply(message, {
-            text: "Here are more facts you can ask me about:",
-            quick_replies: [
-              {
-                title: "Basics",
-                payload: "Basics",
-              },
-              {
-                title: "Work",
-                payload: "Work",
-              },
-              {
-                title: "Volunteer",
-                payload: "Volunteer",
-              },
-              {
-                title: "Education",
-                payload: "Education",
-              },
-              {
-                title: "Awards",
-                payload: "Awards",
-              },
-              {
-                title: "Publications",
-                payload: "Publications",
-              },
-              {
-                title: "Skills",
-                payload: "Skills",
-              },
-              {
-                title: "Languages",
-                payload: "Languages",
-              },
-              {
-                title: "Interests",
-                payload: "Interests",
-              },
-              {
-                title: "References",
-                payload: "References",
-              },
-            ],
-          });
-        }, 1000);
-        resolve("done");
-      });
+      await typingPromise2(bot, message);
     }
   );
 
@@ -927,59 +723,7 @@ module.exports = function(controller) {
         }, 1000);
       });
 
-      // option multiple-choice basics
-      const pMore = await new Promise(async (resolve) => {
-        await bot.reply(message, { type: "typing" });
-
-        await setTimeout(() => {
-          bot.reply(message, {
-            text: "Here are more facts you can ask me about:",
-            quick_replies: [
-              {
-                title: "Basics",
-                payload: "Basics",
-              },
-              {
-                title: "Work",
-                payload: "Work",
-              },
-              {
-                title: "Volunteer",
-                payload: "Volunteer",
-              },
-              {
-                title: "Education",
-                payload: "Education",
-              },
-              {
-                title: "Awards",
-                payload: "Awards",
-              },
-              {
-                title: "Publications",
-                payload: "Publications",
-              },
-              {
-                title: "Skills",
-                payload: "Skills",
-              },
-              {
-                title: "Languages",
-                payload: "Languages",
-              },
-              {
-                title: "Interests",
-                payload: "Interests",
-              },
-              {
-                title: "References",
-                payload: "References",
-              },
-            ],
-          });
-        }, 1000);
-        resolve("done");
-      });
+      await typingPromise2(bot, message);
     }
   );
 
@@ -1013,59 +757,7 @@ module.exports = function(controller) {
         }, 1000);
       });
 
-      // option multiple-choice basics
-      const pMore = await new Promise(async (resolve) => {
-        await bot.reply(message, { type: "typing" });
-
-        await setTimeout(() => {
-          bot.reply(message, {
-            text: "Here are more facts you can ask me about:",
-            quick_replies: [
-              {
-                title: "Basics",
-                payload: "Basics",
-              },
-              {
-                title: "Work",
-                payload: "Work",
-              },
-              {
-                title: "Volunteer",
-                payload: "Volunteer",
-              },
-              {
-                title: "Education",
-                payload: "Education",
-              },
-              {
-                title: "Awards",
-                payload: "Awards",
-              },
-              {
-                title: "Publications",
-                payload: "Publications",
-              },
-              {
-                title: "Skills",
-                payload: "Skills",
-              },
-              {
-                title: "Languages",
-                payload: "Languages",
-              },
-              {
-                title: "Interests",
-                payload: "Interests",
-              },
-              {
-                title: "References",
-                payload: "References",
-              },
-            ],
-          });
-        }, 1000);
-        resolve("done");
-      });
+      await typingPromise2(bot, message);
     }
   );
 
@@ -1102,59 +794,7 @@ module.exports = function(controller) {
         }, 1000);
       });
 
-      // option multiple-choice basics
-      const pMore = await new Promise(async (resolve) => {
-        await bot.reply(message, { type: "typing" });
-
-        await setTimeout(() => {
-          bot.reply(message, {
-            text: "Here are more facts you can ask me about:",
-            quick_replies: [
-              {
-                title: "Basics",
-                payload: "Basics",
-              },
-              {
-                title: "Work",
-                payload: "Work",
-              },
-              {
-                title: "Volunteer",
-                payload: "Volunteer",
-              },
-              {
-                title: "Education",
-                payload: "Education",
-              },
-              {
-                title: "Awards",
-                payload: "Awards",
-              },
-              {
-                title: "Publications",
-                payload: "Publications",
-              },
-              {
-                title: "Skills",
-                payload: "Skills",
-              },
-              {
-                title: "Languages",
-                payload: "Languages",
-              },
-              {
-                title: "Interests",
-                payload: "Interests",
-              },
-              {
-                title: "References",
-                payload: "References",
-              },
-            ],
-          });
-        }, 1000);
-        resolve("done");
-      });
+      await typingPromise2(bot, message);
     }
   );
 
@@ -1188,59 +828,7 @@ module.exports = function(controller) {
         }, 1000);
       });
 
-      // option multiple-choice basics
-      const pMore = await new Promise(async (resolve) => {
-        await bot.reply(message, { type: "typing" });
-
-        await setTimeout(() => {
-          bot.reply(message, {
-            text: "Here are more facts you can ask me about:",
-            quick_replies: [
-              {
-                title: "Basics",
-                payload: "Basics",
-              },
-              {
-                title: "Work",
-                payload: "Work",
-              },
-              {
-                title: "Volunteer",
-                payload: "Volunteer",
-              },
-              {
-                title: "Education",
-                payload: "Education",
-              },
-              {
-                title: "Awards",
-                payload: "Awards",
-              },
-              {
-                title: "Publications",
-                payload: "Publications",
-              },
-              {
-                title: "Skills",
-                payload: "Skills",
-              },
-              {
-                title: "Languages",
-                payload: "Languages",
-              },
-              {
-                title: "Interests",
-                payload: "Interests",
-              },
-              {
-                title: "References",
-                payload: "References",
-              },
-            ],
-          });
-        }, 1000);
-        resolve("done");
-      });
+      await typingPromise2(bot, message);
     }
   );
 }
