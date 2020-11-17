@@ -1,5 +1,5 @@
 .splash-footer {
-  width: 100%;
+  /* width: 100%;
   position: fixed;
   border-top: 1px solid gray;
   font-family: 'Shrikhand', cursive;
@@ -8,29 +8,47 @@
   z-index: 10;
   background-color: black;
   bottom: 0;
-  padding-bottom: 20px;
+  padding-bottom: 20px; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 25vh;
+  background-color: black;
+  border-top: 1px solid gray;
+  color: white;
+}
+
+.splash-footer h1, .splash-footer p, .splash-footer a {
+  font-family: 'Shrikhand', cursive;
 }
 
 .footer-main-title {
-  margin-bottom: 0px;
+  font-size: 34px;
 }
-
 
 .footer-profiles {
-  margin-top: 0px;
   display: flex;
-  flex-direction: row;
   justify-content: space-around;
-
-
+  align-items: center;
+  width: 100vw;
 }
 
-.footer-links p {
-  font: 30px;
-  margin-bottom: 1px;
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .footer-links a {
-  text-decoration: none;
-  margin-right: 7px;
+  margin: 0 4px;
+}
+
+.team {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
