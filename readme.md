@@ -1,12 +1,19 @@
 # ChatBot
+Webapp created during the [Mintbean's Hack the ChatBot hackathon.](https://www.mintbean.io/meets/190aa1d6-f911-4808-af10-dc9e57400f38)
+### Check me out [Live!](https://calm-plains-75990.herokuapp.com/)
 
-## Check me out [Live!](https://calm-plains-75990.herokuapp.com/)
+---
 
-This is a Botkit starter kit for web, created with the [Yeoman generator](https://github.com/howdyai/botkit/tree/master/packages/generator-botkit#readme).
+## Technologies
+- Node.js
+- [Botkit.ai](https://botkit.ai) library
+- [Particles.js](https://github.com/VincentGarreau/particles.js/) library
+- JavaScript
+- Websockets
 
-To complete the configuration of this bot, make sure to update the included `.env` file with your platform tokens and credentials.
+---
 
-[Botkit Docs](https://botkit.ai/docs/v4)
-
-This bot is powered by [a folder full of modules](https://botkit.ai/docs/v4/core.html#organize-your-bot-code). 
-Edit the samples, and add your own in the [features/](features/) folder.
+## Team Member
+- [Alfredo Sumosa](https://github.com/alfredosumosav/)
+- [Carl Godlewski](https://github.com/CGodl/)
+- [Renata Santoso](https://github.com/resant18)
