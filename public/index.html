@@ -1,7 +1,7 @@
 <html>
     <head>
         <title>Botkit Anywhere</title>
-        <script arc="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.2/particles.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.2/particles.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.min.js"></script>
         <script src="https://cdn.rawgit.com/showdownjs/showdown/1.7.4/dist/showdown.min.js"></script>       
         <link rel="stylesheet" href="/css/styles.css" />
@@ -13,14 +13,65 @@
       <div class='intro-blurb-box'>
         <h1>ChatBot</h1>
         <p>Bot interface connecting you to a digital representation of one of this app's creators</p>  
-        <a href='./chat.html'><button class='enter-button'>Start a discussion now</button></a>
+        <button id="chat-btn" class='enter-button'>Start a discussion now</button>
       </div>
-
+      
       <canvas class="splash-background"></canvas>
-
-        <!-- <script src="path/to/particles.min.js"></script> -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.2/particles.min.js"></script>
+        <footer class="splash-footer">
+            <h1 class="footer-main-title">Visit the creators at</h1>
+              <div class="footer-profiles">
+                <section class="footer-links">
+                  <p>LinkedIn</p>
+                  <a
+                    href="https://linkedin.com/in/alfredosumosa"
+                    target="_blank"
+                  >
+                  Alfredo Sumosa
+                  </a>
+                  <a
+                    href="https://www.linkedin.com/in/carlgodlewski/"
+                    target="_blank"
+                  >
+                  Carl Godlewski
+                  </a>
+                  <a
+                    href="https://www.linkedin.com/in/renata-santoso/"
+                    target="_blank"
+                  >
+                  Renata Santoso
+                  </a>
+                </section>
+                <section class="footer-links">
+                  <p>Github</p>
+    
+                  <a
+                    href="https://github.com/alfredosumosav/"
+                    target="_blank"
+                  >
+                  Alfredo Sumosa
+                  </a>
+                  <a
+                    href="https://github.com/CGodl/"
+                    target="_blank"
+                  >
+                  Carl Godlewski
+                  </a>
+                  <a
+                    href="https://github.com/resant18"
+                    target="_blank"
+                  >
+                  Renata Santoso
+                  </a>
+                </section>
+              </div>
+        </footer>   
         <script type="text/javascript" src="particleScript.js"></script>
+        <script>
+          const btn = document.getElementById("chat-btn");
+          btn.addEventListener("click", function (e) {
+            window.location.pathname = "/chat.html";
+          })
+        </script>
     </body>
 
 
@@ -28,52 +79,4 @@
 
 
 
-    <footer class="splash-footer">
-        <h1 class="footer-main-title">Visit the creators at</h1>
-          <div class="footer-profiles">
-            <section class="footer-links">
-              <p>LinkedIn</p>
-              <a
-                href="https://linkedin.com/in/alfredosumosa"
-                target="_blank"
-              >
-              Alfredo Sumosa
-              </a>
-              <a
-                href="https://www.linkedin.com/in/carlgodlewski/"
-                target="_blank"
-              >
-              Carl Godlewski
-              </a>
-              <a
-                href="https://www.linkedin.com/in/renata-santoso/"
-                target="_blank"
-              >
-              Renata Santoso
-              </a>
-            </section>
-            <section class="footer-links">
-              <p>Github</p>
-
-              <a
-                href="https://github.com/alfredosumosav/"
-                target="_blank"
-              >
-              Alfredo Sumosa
-              </a>
-              <a
-                href="https://github.com/CGodl/"
-                target="_blank"
-              >
-              Carl Godlewski
-              </a>
-              <a
-                href="https://github.com/resant18"
-                target="_blank"
-              >
-              Renata Santoso
-              </a>
-            </section>
-          </div>
-    </footer>   
 </html>
