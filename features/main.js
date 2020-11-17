@@ -5,7 +5,59 @@
 
 const resume = require("../resume.json");
 
-module.exports = function(controller) {
+module.exports = function (controller) {
+  // Greet the user on first time!!!!
+  controller.on("hello", async (bot, message) => {
+    const w0 = await new Promise(async (resolve) => {
+      await bot.reply(message, { type: "typing" });
+      return setTimeout(async () => {
+        await bot.changeContext(message.reference);
+        return resolve(
+          bot.reply(message, `Hello, welcome to the chatbot interview world`)
+        );
+      }, 1000);
+    });
+
+    const w1 = await new Promise(async (resolve) => {
+      await bot.reply(message, { type: "typing" });
+      return setTimeout(async () => {
+        await bot.changeContext(message.reference);
+        return resolve(
+          bot.reply(
+            message,
+            `This chatbot allows you the chance to interview either Alfredo, Carl, or Renata`
+          )
+        );
+      }, 1000);
+    });
+
+    const w2 = await new Promise(async (resolve) => {
+      await bot.reply(message, { type: "typing" });
+      return setTimeout(async () => {
+        await bot.changeContext(message.reference);
+        return resolve(
+          await bot.reply(message, {
+            text: "Who would you like to interview?",
+            quick_replies: [
+              {
+                title: "Alfredo",
+                payload: "alfredo",
+              },
+              {
+                title: "Carl",
+                payload: "Carl",
+              },
+              {
+                title: "Renata",
+                payload: "Renata",
+              },
+            ],
+          })
+        );
+      }, 1000);
+    });
+  });
+
   // Greet the user every time!!!!
   controller.on("welcome_back", async (bot, message) => {
     const w0 = await new Promise(async (resolve) => {
@@ -183,7 +235,7 @@ module.exports = function(controller) {
     }
   );
 
-      // option multiple-choice basics
+  // option multiple-choice basics
   const typingPromise2 = (bot, message) => {
     return new Promise(async (resolve) => {
       await bot.reply(message, { type: "typing" });
@@ -237,7 +289,7 @@ module.exports = function(controller) {
       }, 1000);
       resolve("done");
     });
-  }
+  };
 
   // Bot hears basics.
   controller.hears(
@@ -751,7 +803,10 @@ module.exports = function(controller) {
             );
           } else {
             return resolve(
-              bot.reply(message, `Some of my interests include ${interestsArr.join(", ")}`)
+              bot.reply(
+                message,
+                `Some of my interests include ${interestsArr.join(", ")}`
+              )
             );
           }
         }, 1000);
@@ -785,10 +840,7 @@ module.exports = function(controller) {
             );
           } else {
             return resolve(
-              bot.reply(
-                message,
-                `Some of my publications include:\n\n${text}`
-              )
+              bot.reply(message, `Some of my publications include:\n\n${text}`)
             );
           }
         }, 1000);
