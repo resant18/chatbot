@@ -24,7 +24,7 @@ Webapp created during the [Mintbean's Hack the ChatBot hackathon.](https://www.m
 ## Chat Interface
 
 <div align="center">
-    <img width=80% src="https://firebasestorage.googleapis.com/v0/b/extractify-pdf.appspot.com/o/chatbot_basics2.gif?alt=media&token=1840d5a5-268c-4943-9192-eb5a825a0b0c">
+    <img width=80% src="https://firebasestorage.googleapis.com/v0/b/extractify-pdf.appspot.com/o/chatbot_basics.gif?alt=media&token=d4c64d56-b8c2-4c43-b5f9-88f99c26409d">
 </div>
 
 ---
