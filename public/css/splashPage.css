@@ -1,7 +1,13 @@
 
 
 .intro-blurb-box {
-  margin-top: 18vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  position: absolute;
+  height: 75vh;
+  /* margin-top: 18vh;
   margin-left: 30vw;
   margin-right: 30vw;
 
@@ -9,7 +15,7 @@
   display: block;
   z-index: 5;
   background-color: transparent;
-  width: 600px;
+  width: 600px; */
 }
 
 .intro-blurb-box h1 {
@@ -17,29 +23,35 @@
   color: white;
   text-shadow: 1px 1px #C6C6C6;
   text-align: center;
-  font-size: 80px;
-  margin-bottom: 0px;
+  font-size: 7vw;
 }
 
 .intro-blurb-box p {
-  margin-top: 5px;
   font-family: 'Orbitron', sans-serif;
-  color: white;
+  color: #ccc;
+  font-size: 3.5vw;
   text-align: center;
-  font-size: 20px;
 }
 
 .enter-button {
+  background-color: #592a94;
+  border: 2px solid #545454;
+  font-family: 'Orbitron', sans-serif;
+  color: #ccc;
+  border-radius: 5px;
+  font-size: 2vw;
+  text-align: center;
+  height: 12vh;
   /* position: absolute;
   display: block; */
-  height: 60px;
+  /* height: 60px;
   width: 200px;
   background-color: #592a94;
   border: 2px solid black;
   font-family: 'Orbitron', sans-serif;
   color: black;
   border-radius: 5px;
-  margin-left: 31%;
+  margin-left: 31%; */
 }
 
 
@@ -47,10 +59,6 @@
 
 .splash-background {
   background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
-  position: absolute;
-  display: block;
-  top: 0;
-  left: 0;
-  z-index: 0;
-  
+  width: 100vw;
+  height: 75vh;
 }

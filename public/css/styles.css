@@ -14,6 +14,7 @@ html {
   font-size: 18px;
   background-color: #FFF;
   font-family: "helvetica", sans-serif;
+  height: 100vh;
 }
 
 .wrapper {
@@ -347,3 +348,14 @@ a.button:hover {
 }
 
 /*# sourceMappingURL=styles.css.map */
+
+.enter-button:hover {
+  cursor: pointer;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 75vh;
+}
