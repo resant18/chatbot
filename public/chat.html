@@ -1,75 +1,124 @@
 <html>
-    <head>
-        <title>Botkit Anywhere</title>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.min.js"></script>
-        <script src="https://cdn.rawgit.com/showdownjs/showdown/1.7.4/dist/showdown.min.js"></script>
-        <link rel="stylesheet" href="/css/styles.css" />
-        <script src="/client.js" defer></script>
-        <!-- Google Analytics -->
-        <script>
-          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-          })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  <head>
+    <title>ChatBot</title>
+    <meta name="description" content="A JavaScript Webapp leveraging the botkit.js library to create a Chat Bot." />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.min.js"></script>
+    <script src="https://cdn.rawgit.com/showdownjs/showdown/1.7.4/dist/showdown.min.js"></script>
+    <link rel="stylesheet" href="/css/styles.css" />
+    <script src="/client.js" defer></script>
 
-          ga('create', 'UA-156374155-2', 'auto');
-          ga('send', 'pageview');
-        </script>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
-    <body >
-      <div class="wrapper">
+    <!-- Metadata Facebook OGP (Open Graph Protocol) -->
+    <meta property="og:url" content="https://calm-plains-75990.herokuapp.com/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="ChatBot" />
+    <meta
+      property="og:description"
+      content="A JavaScript Webapp leveraging the botkit.js library to create a Chat Bot."
+    />
+    <meta
+      property="og:image"
+      content="https://firebasestorage.googleapis.com/v0/b/extractify-pdf.appspot.com/o/chatbot-dashboard.png?alt=media&token=9730bccb-ff33-4245-9f57-70d97970ea79"
+    />
+    <meta property="og:image:width" content="700" />
+    <meta property="og:image:height" content="700" />
+    <meta
+      property="og:image:alt"
+      content="A splash page for the ChatBot Webapp."
+    />
 
-        <div id="message_window">
-            <div class="disconnected">
-                Disconnected... reconnecting!
-            </div>
-            <div class="offline">
-                Offline! Reload to reconnect.
-            </div>
-            <div class="powered_by">
-              Powered by <a href="https://botkit.ai" target="_blank" title="Building Blocks for Building Bots"><img src="/botkit_icon.png" width="15" height="15" alt="Botkit Logo" /> Botkit</a>
-      
-            </div>
-            <section>
-                <div id="message_list">
-                    <div id="message_template">
-                        <div class="message {{message.type}}">
-                            {{#if message.isTyping}}
-                              <div class="typing-indicator">
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                              </div>
-                            {{/if}}
-                            {{{message.html}}}
+    <!-- Google Analytics -->
+    <script>
+      (function (i, s, o, g, r, a, m) {
+        i["GoogleAnalyticsObject"] = r;
+        (i[r] =
+          i[r] ||
+          function () {
+            (i[r].q = i[r].q || []).push(arguments);
+          }),
+          (i[r].l = 1 * new Date());
+        (a = s.createElement(o)), (m = s.getElementsByTagName(o)[0]);
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m);
+      })(
+        window,
+        document,
+        "script",
+        "https://www.google-analytics.com/analytics.js",
+        "ga"
+      );
 
-                            {{#if message.open_link}}
-                              <a href="{{{message.open_link}}}" target="_blank" class="button_message">{{#if message.link_title}}{{message.link_title}}{{else}}{{message.open_link}}{{/if}}</a>
-                            {{/if}}
-                        </div>
-                        {{#message.files}}
-                          <div class="file_attachment">
-                          {{#if image}}
-                            <img src="{{{url}}}" alt="{{{url}}}" />
-                          {{else}}
-                            <a href="{{{url}}}" title="{{{url}}}">{{{url}}}</a>
-                          {{/if}}
-                          </div>
-                        {{/message.files}}
-                    </div>
+      ga("create", "UA-156374155-2", "auto");
+      ga("send", "pageview");
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div id="message_window">
+        <div class="disconnected">Disconnected... reconnecting!</div>
+        <div class="offline">Offline! Reload to reconnect.</div>
+        <div class="powered_by">
+          Powered by
+          <a
+            href="https://botkit.ai"
+            target="_blank"
+            title="Building Blocks for Building Bots"
+            ><img
+              src="/botkit_icon.png"
+              width="15"
+              height="15"
+              alt="Botkit Logo"
+            />
+            Botkit</a
+          >
+        </div>
+        <section>
+          <div id="message_list">
+            <div id="message_template">
+              <div class="message {{message.type}}">
+                {{#if message.isTyping}}
+                <div class="typing-indicator">
+                  <span></span>
+                  <span></span>
+                  <span></span>
                 </div>
-            </section>
-            <div id="message_replies">
+                {{/if}} {{{message.html}}} {{#if message.open_link}}
+                <a
+                  href="{{{message.open_link}}}"
+                  target="_blank"
+                  class="button_message"
+                  >{{#if
+                  message.link_title}}{{message.link_title}}{{else}}{{message.open_link}}{{/if}}</a
+                >
+                {{/if}}
+              </div>
+              {{#message.files}}
+              <div class="file_attachment">
+                {{#if image}}
+                <img src="{{{url}}}" alt="{{{url}}}" />
+                {{else}}
+                <a href="{{{url}}}" title="{{{url}}}">{{{url}}}</a>
+                {{/if}}
+              </div>
+              {{/message.files}}
             </div>
-            <footer>
-                <form onsubmit="Botkit.send(Botkit.input.value, event)">
-                    <input type="text" autocomplete="off" id="messenger_input" placeholder="Type here..." />
-                    <button type="submit">Send</button>
-                </form>
-            </footer>
-        </div>
-        </div>
-        <!-- <script src="/client.js"></script> -->
-    </body>
+          </div>
+        </section>
+        <div id="message_replies"></div>
+        <footer>
+          <form onsubmit="Botkit.send(Botkit.input.value, event)">
+            <input
+              type="text"
+              autocomplete="off"
+              id="messenger_input"
+              placeholder="Type here..."
+            />
+            <button type="submit">Send</button>
+          </form>
+        </footer>
+      </div>
+    </div>
+    <!-- <script src="/client.js"></script> -->
+  </body>
 </html>
