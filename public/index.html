@@ -1,98 +1,125 @@
 <html>
-    <head>
-        <title>Botkit Anywhere</title>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.2/particles.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.min.js"></script>
-        <script src="https://cdn.rawgit.com/showdownjs/showdown/1.7.4/dist/showdown.min.js"></script>       
-        <!-- Google Analytics -->
-        <script>
-          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-          })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  <head>
+    <title>Botkit Anywhere</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.2/particles.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.min.js"></script>
+    <script src="https://cdn.rawgit.com/showdownjs/showdown/1.7.4/dist/showdown.min.js"></script>
+    
+    <!-- Metadata Facebook OGP (Open Graph Protocol) -->
+    <meta
+      property="og:url"
+      content="https://calm-plains-75990.herokuapp.com/"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="ChatBot" />
+    <meta
+      property="og:description"
+      content="A JavaScript Webapp leveraging the botkit.js library to create a Chat Bot."
+    />
+    <meta
+      property="og:image"
+      content="https://firebasestorage.googleapis.com/v0/b/extractify-pdf.appspot.com/o/chatbot-dashboard.png?alt=media&token=9730bccb-ff33-4245-9f57-70d97970ea79"
+    />
+    <meta property="og:image:width" content="700" />
+    <meta property="og:image:height" content="700" />
+    <meta
+      property="og:image:alt"
+      content="A splash page for the ChatBot Webapp."
+    />
 
-          ga('create', 'UA-156374155-2', 'auto');
-          ga('send', 'pageview');
-        </script>
-        <link rel="stylesheet" href="/css/styles.css" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="https://fonts.googleapis.com/css2?family=Orbitron&family=Pacifico&family=Shrikhand&family=VT323&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="/css/css_reset.css">
-    </head>
-    <body class= 'splash-body'>
-      
-      <div class="container">
-        <div class='intro-blurb-box'>
-          <h1>ChatBot</h1>
-          <p>Bot interface connecting you to a digital representation of one of this app's creators</p>  
-          <button id="chat-btn" class='enter-button'>Start a discussion now</button>
-        </div>
-        <canvas class="splash-background"></canvas>
+    <!-- Google Analytics -->
+    <script>
+      (function (i, s, o, g, r, a, m) {
+        i["GoogleAnalyticsObject"] = r;
+        (i[r] =
+          i[r] ||
+          function () {
+            (i[r].q = i[r].q || []).push(arguments);
+          }),
+          (i[r].l = 1 * new Date());
+        (a = s.createElement(o)), (m = s.getElementsByTagName(o)[0]);
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m);
+      })(
+        window,
+        document,
+        "script",
+        "https://www.google-analytics.com/analytics.js",
+        "ga"
+      );
+
+      ga("create", "UA-156374155-2", "auto");
+      ga("send", "pageview");
+    </script>
+    <link rel="stylesheet" href="/css/styles.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron&family=Pacifico&family=Shrikhand&family=VT323&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/css_reset.css" />
+  </head>
+  <body class="splash-body">
+    <div class="container">
+      <div class="intro-blurb-box">
+        <h1>ChatBot</h1>
+        <p>
+          Bot interface connecting you to a digital representation of one of
+          this app's creators
+        </p>
+        <button id="chat-btn" class="enter-button">
+          Start a discussion now
+        </button>
       </div>
+      <canvas class="splash-background"></canvas>
+    </div>
 
-        <footer class="splash-footer">
-            <h1 class="footer-main-title">Visit the creators at</h1>
-              <div class="footer-profiles">
-                <section class="footer-links">
-                  <p>LinkedIn</p>
-                  <div class="team">
-                    <a
-                      href="https://linkedin.com/in/alfredosumosa"
-                      target="_blank"
-                    >
-                    Alfredo Sumosa
-                    </a>
-                    <a
-                      href="https://www.linkedin.com/in/carlgodlewski/"
-                      target="_blank"
-                    >
-                    Carl Godlewski
-                    </a>
-                    <a
-                      href="https://www.linkedin.com/in/renata-santoso/"
-                      target="_blank"
-                    >
-                    Renata Santoso
-                    </a>
-                  </div>
-                </section>
-                <section class="footer-links">
-                  <p>Github</p>
-                  <div class="team">
-                    <a
-                      href="https://github.com/alfredosumosav/"
-                      target="_blank"
-                    >
-                    Alfredo Sumosa
-                    </a>
-                    <a
-                      href="https://github.com/CGodl/"
-                      target="_blank"
-                    >
-                    Carl Godlewski
-                    </a>
-                    <a
-                      href="https://github.com/resant18"
-                      target="_blank"
-                    >
-                    Renata Santoso
-                    </a>
-                  </div>
-                </section>
-              </div>
-        </footer>   
-        <script type="text/javascript" src="particleScript.js"></script>
-        <script>
-          const btn = document.getElementById("chat-btn");
-          btn.addEventListener("click", function (e) {
-            window.location.pathname = "/chat.html";
-          })
-        </script>
-    </body>
-
-
-
-
-
-
+    <footer class="splash-footer">
+      <h1 class="footer-main-title">Visit the creators at</h1>
+      <div class="footer-profiles">
+        <section class="footer-links">
+          <p>LinkedIn</p>
+          <div class="team">
+            <a href="https://linkedin.com/in/alfredosumosa" target="_blank">
+              Alfredo Sumosa
+            </a>
+            <a
+              href="https://www.linkedin.com/in/carlgodlewski/"
+              target="_blank"
+            >
+              Carl Godlewski
+            </a>
+            <a
+              href="https://www.linkedin.com/in/renata-santoso/"
+              target="_blank"
+            >
+              Renata Santoso
+            </a>
+          </div>
+        </section>
+        <section class="footer-links">
+          <p>Github</p>
+          <div class="team">
+            <a href="https://github.com/alfredosumosav/" target="_blank">
+              Alfredo Sumosa
+            </a>
+            <a href="https://github.com/CGodl/" target="_blank">
+              Carl Godlewski
+            </a>
+            <a href="https://github.com/resant18" target="_blank">
+              Renata Santoso
+            </a>
+          </div>
+        </section>
+      </div>
+    </footer>
+    <script type="text/javascript" src="particleScript.js"></script>
+    <script>
+      const btn = document.getElementById("chat-btn");
+      btn.addEventListener("click", function (e) {
+        window.location.pathname = "/chat.html";
+      });
+    </script>
+  </body>
 </html>
